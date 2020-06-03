@@ -1,0 +1,187 @@
+
+
+=============================mysql assignment==========================================
+
+
+
+
+
+
+
+QQ01. Display distinct Employee id, Employee name who kept the item issued for more than a year.
+
+
+ mysql>select distinct employee_id,employee_name 
+from employee_master as e1 joinsemployee_issue_details as e2 on(e1.employee_id=e2.employee_id)
+ where datediff(return_date,issuedate)/365>1;
+
+02. Count number of customers who have gone for loan type Stationary. 
+
+  mysql> select count(employee_id)from employee_card_details where loan_id IN(sele
+ct loan_id from loan_card_master where loan_type="stationary");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                  2 |
++--------------------+
+
+
+03. Display Category and number of item in that category.
+
+mysql> select count(employee_id)from employee_card_details where loan_id IN(sele
+ct loan_id from loan_card_master where loan_type="stationary");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                  2 |
++--------------------+
+
+
+QQ04. Empid ,Emp Name who joined the company after 2005.
+
+mysql> select employee_id,employee_name,date_of_joining from employee_master whe
+re date_of_joining>2004-12-31;
++-------------+---------------+-----------------+
+| employee_id | employee_name | date_of_joining |
++-------------+---------------+-----------------+
+| E001        | ram           | 2001-02-14      |
+| E002        | sashi         | 2010-02-04      |
+| E003        | prerna        | 2010-10-14      |
+| E004        | pratik        | 2005-02-12      |
+| E005        | ram           | 2001-02-14      |
+| E006        | ram           | 2007-01-04      |
+| E007        | vivek         | 2006-03-12      |
+| E008        | garima        | 2007-04-01      |
+| E009        | ramesh        | 1998-05-06      |
+| E010        | jatin         | 2012-01-04      |
+| E011        | sonam         | 2013-07-03      |
+| E012        | surya         | 2013-07-03      |
++-------------+---------------+-----------------+
+
+05. Count gender and group by gender.
+
+mysql> select gender, count(employee_id) from employee_master group by gender;
++--------+--------------------+
+| gender | count(employee_id) |
++--------+--------------------+
+| female |                  4 |
+| male   |                  8 |
++--------+--------------------+
+
+06. Count number of employees whose issue status is yes.
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+
+09.Display count of employees who have recieved loan.
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+
+11. Details of issue id,emp id,name who had issued in product display in 
+sorted order of issue_id.
+
+
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+
+12. Display customer who has not availed for loan.
+
+
+
+
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+
+
+
+QQ13. Display emp records for whom never issued an item as a loan order based on emp id 
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+QQ14. Display empid,name who has the highest valuation. if multiple records then display 
+in order of emp id 
+15. Display No. of emp in HR dept
+
+
+
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+
+16. Display issue status  and number of items of furniture based on issued and not issued 
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+17. Display empid and total valuation of each employee where employee must have 
+at least one product issued
+
+
+
+18. Disp empid,name and count of categories of each emp having at least 2 categories
+
+19. Display name of categories and no of items in each category and sort in order of
+ no of items
+
+mysql> select distinct count(employee_id)from employee_issue_details where item_
+id in(select item_id from item_master where issue_status="yes");
++--------------------+
+| count(employee_id) |
++--------------------+
+|                 13 |
++--------------------+
+1 row in set (0.36 sec)
+
+20. Display empid,name with their total valuations.
+
