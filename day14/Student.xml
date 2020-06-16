@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE students SYSTEM "studentstruct.dtd">
+<students>
+<student>
+<id>2001</id>
+<name>muskan</name>
+</student>
+<student>
+<id>2002</id>
+<name>richa</name>
+</student>
+<student>
+<id>2003</id>
+<name>rakesh</name>
+</student>
+</students>
