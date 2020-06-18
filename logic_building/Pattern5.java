@@ -1,14 +1,14 @@
-package ;
+package tech;
 
 import java.util.Scanner;
 
-public class Ex_35_Pattern5 {
+public class Pattern5 {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int num,i,j,k,count,r;
 		//Input the number of lines you lines you want to display above and below in your pattern
-	    System.out.println("Enter number of lines you want to display above and below in your pattern: ");
+	    System.out.println("Enter number of lines you want to display : ");
 	    num=sc.nextInt();
 	    count=0;
 	    k=2;
